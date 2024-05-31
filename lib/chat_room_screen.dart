@@ -121,7 +121,7 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
       List<String> commonInterests = [];
       if (currentUserInterests != null && otherUserInterests != null) {
         for (String interest in currentUserInterests) {
-          if (otherUserInterests.contains(interest)) {
+          if (interest != '' && otherUserInterests.contains(interest)) {
             commonInterests.add(interest);
           }
         }
